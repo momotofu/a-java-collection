@@ -90,7 +90,16 @@ public class MadLibs {
     }
 
     public void setRandomNums() {
+        int num = Math.abs(rand.nextInt()) % 1000000;
+        int index = 0;
+        int[] numberHolder = new int[3];
 
+        while (index < numberHolder.length) {
+            numberHolder[index] = num + index;
+            index++;
+        }
+
+        randomNums = "not " + numberHolder[0] + ", not " + numberHolder[1] + ", but " + numberHolder[2];
     }
 
     // print instructions to player
