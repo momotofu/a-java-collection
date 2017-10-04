@@ -99,32 +99,38 @@ public class MadLibs {
         + " Start by typing in a name.");
     }
 
-    // get data
+    // get data from player
     public void enterName() {
         setName(scanner.nextLine());
     }
 
     public void enterNoun1() {
+        System.out.println("Type in a noun.");
         setNoun1(scanner.nextLine());
     }
 
     public void enterNoun2() {
+        System.out.println("Type in another noun.");
         setNoun1(scanner.nextLine());
     }
 
     public void enterNoun3() {
+        System.out.println("Type in another noun.");
         setNoun1(scanner.nextLine());
     }
 
     public void enterAdjective1() {
+        System.out.println("Type in an adjective.");
         setAdjective1(scanner.nextLine());
     }
 
     public void enterAdjective2() {
+        System.out.println("Type in another adjective.");
         setAdjective2(scanner.nextLine());
     }
 
     public void enterAdverb() {
+        System.out.println("Type in an adverb.");
         setAdverb(scanner.nextLine());
     }
 
