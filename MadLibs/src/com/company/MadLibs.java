@@ -105,32 +105,32 @@ public class MadLibs {
     }
 
     public void enterNoun1() {
-        System.out.println("Type in a noun.");
+        System.out.println("Give me a noun.");
         setNoun1(scanner.nextLine());
     }
 
     public void enterNoun2() {
-        System.out.println("Type in another noun.");
+        System.out.println("Give me another noun.");
         setNoun1(scanner.nextLine());
     }
 
     public void enterNoun3() {
-        System.out.println("Type in another noun.");
+        System.out.println("Give me the lat noun.");
         setNoun1(scanner.nextLine());
     }
 
     public void enterAdjective1() {
-        System.out.println("Type in an adjective.");
+        System.out.println("Give me an adjective.");
         setAdjective1(scanner.nextLine());
     }
 
     public void enterAdjective2() {
-        System.out.println("Type in another adjective.");
+        System.out.println("Give me the last adjective.");
         setAdjective2(scanner.nextLine());
     }
 
     public void enterAdverb() {
-        System.out.println("Type in an adverb.");
+        System.out.println("Give me an adverb.");
         setAdverb(scanner.nextLine());
     }
 
