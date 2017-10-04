@@ -47,6 +47,10 @@ public class MadLibs {
         return this.noun2;
     }
 
+    public String getAdverb() {
+        return this.adverb;
+    }
+
     public String getRandomNums() {
         return this.randomNums;
     }
@@ -89,7 +93,51 @@ public class MadLibs {
 
     }
 
+    // print instructions to player
     public void printInstructions() {
-        System.out.println("Welcome to the Madlibs game. If you type in words, we'll give you a story.");
+        System.out.println("Welcome to the Madlibs game. If you type in words, we'll give you a story."
+        + " Start by typing in a name.");
     }
+
+    // get data
+    public void enterName() {
+        setName(scanner.nextLine());
+    }
+
+    public void enterNoun1() {
+        setNoun1(scanner.nextLine());
+    }
+
+    public void enterNoun2() {
+        setNoun1(scanner.nextLine());
+    }
+
+    public void enterNoun3() {
+        setNoun1(scanner.nextLine());
+    }
+
+    public void enterAdjective1() {
+        setAdjective1(scanner.nextLine());
+    }
+
+    public void enterAdjective2() {
+        setAdjective2(scanner.nextLine());
+    }
+
+    public void enterAdverb() {
+        setAdverb(scanner.nextLine());
+    }
+
+
+    public void putTogetherStory() {
+        String story = "Jesse and her best friend " + getName() + " went to Disney World today! "
+                + "They saw a " + getNoun1() + " in a show at the Magic Kingdom. "
+                + "And ate a " + getAdjective1() + " feast for dinner. "
+                + "The next day I ran " + getAdverb() + " to meet Micky Mouse in his "
+                + getNoun2() + ". And then at night I gazed at the " + getRandomNums()
+                + " " + getAdjective2() + " fireworks shooting from the " + getNoun3() + ".";
+
+        setStory(story);
+    }
+
 }
