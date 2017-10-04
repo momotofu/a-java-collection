@@ -14,6 +14,7 @@ public class MadLibs {
     String noun2;
     String noun3;
     String adverb;
+    String adverb2;
     String randomNums;
     Random rand = new Random();
 
@@ -49,6 +50,10 @@ public class MadLibs {
 
     public String getAdverb() {
         return this.adverb;
+    }
+
+    public String getAdverb2() {
+        return this.adverb2;
     }
 
     public String getRandomNums() {
@@ -89,8 +94,12 @@ public class MadLibs {
         this.adverb = adverb;
     }
 
+    public void setAdverb2(String adverb2) {
+        this.adverb2 = adverb2;
+    }
+
     public void setRandomNums() {
-        int num = Math.abs(rand.nextInt()) % 1000000;
+        int num = Math.abs(rand.nextInt()) % 10;
         int index = 0;
         int[] numberHolder = new int[3];
 
@@ -143,6 +152,11 @@ public class MadLibs {
         setAdverb(scanner.nextLine());
     }
 
+    public void enterAdverb2() {
+        System.out.println("Enter the last adverb.");
+        setAdverb2(scanner.nextLine());
+    }
+
 
     public void putTogetherStory() {
         String story;
@@ -158,11 +172,11 @@ public class MadLibs {
         } else {
             story = "There was once a kitty named " + getName() + "."
                     + " She was always so " + getAdjective2() +" curious."
-                    + " And loved to play with " + getAdjective1() + getNoun2() + "."
+                    + " And loved to play with " + getAdjective1() + " " + getNoun2() + "."
                     + " Whenever she saw her owner she would " + getAdverb() + " leap for joy."
                     + " One day she saw a scary " + getNoun1() + " and became frightened."
-                    + " " + getAdverb() + " she ran back to her master and ate " + getRandomNums()
-                    + " " + getNoun3() + ".";
+                    + " " + getAdverb2() + " she ran back to her master and ate " + getRandomNums()
+                    + " peaces of " + getNoun3() + ".";
         }
 
         setStory(story);
@@ -176,6 +190,7 @@ public class MadLibs {
         enterNoun2();
         enterAdverb();
         enterNoun3();
+        enterAdverb2();
         setRandomNums();
         putTogetherStory();
         System.out.println(getStory());
