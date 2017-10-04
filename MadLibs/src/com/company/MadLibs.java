@@ -44,7 +44,7 @@ public class MadLibs {
     }
 
     public String getNoun3() {
-        return this.noun2;
+        return this.noun3;
     }
 
     public String getAdverb() {
@@ -120,12 +120,12 @@ public class MadLibs {
 
     public void enterNoun2() {
         System.out.println("Give me another noun.");
-        setNoun1(scanner.nextLine());
+        setNoun2(scanner.nextLine());
     }
 
     public void enterNoun3() {
-        System.out.println("Give me the lat noun.");
-        setNoun1(scanner.nextLine());
+        System.out.println("Give me the last noun.");
+        setNoun3(scanner.nextLine());
     }
 
     public void enterAdjective1() {
@@ -145,14 +145,39 @@ public class MadLibs {
 
 
     public void putTogetherStory() {
-        String story = "Jesse and her best friend " + getName() + " went to Disney World today! "
-                + "They saw a " + getNoun1() + " in a show at the Magic Kingdom. "
-                + "And ate a " + getAdjective1() + " feast for dinner. "
-                + "The next day I ran " + getAdverb() + " to meet Micky Mouse in his "
-                + getNoun2() + ". And then at night I gazed at the " + getRandomNums()
-                + " " + getAdjective2() + " fireworks shooting from the " + getNoun3() + ".";
+        String story;
+        int num = Math.abs(rand.nextInt()) % 2;
+
+        if (num == 0) {
+            story = "Jesse and her best friend " + getName() + " went to Disney World today! "
+                    + "They saw a " + getNoun1() + " in a show at the Magic Kingdom. "
+                    + "And ate a " + getAdjective1() + " feast for dinner. "
+                    + "The next day I ran " + getAdverb() + " to meet Micky Mouse in his "
+                    + getNoun2() + ". And then at night I gazed at the " + getRandomNums()
+                    + " " + getAdjective2() + " fireworks shooting from the " + getNoun3() + ".";
+        } else {
+            story = "There was once a kitty named " + getName() + "."
+                    + " She was always so " + getAdjective2() +" curious."
+                    + " And loved to play with " + getAdjective1() + getNoun2() + "."
+                    + " Whenever she saw her owner she would " + getAdverb() + " leap for joy."
+                    + " One day she saw a scary " + getNoun1() + " and became frightened."
+                    + " " + getAdverb() + " she ran back to her master and ate " + getRandomNums()
+                    + " " + getNoun3() + ".";
+        }
 
         setStory(story);
     }
 
+    public void play() {
+        enterName();
+        enterNoun1();
+        enterAdjective1();
+        enterAdjective2();
+        enterNoun2();
+        enterAdverb();
+        enterNoun3();
+        setRandomNums();
+        putTogetherStory();
+        System.out.println(getStory());
+    }
 }

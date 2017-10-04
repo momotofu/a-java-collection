@@ -6,5 +6,6 @@ public class Main {
 	// write your code here
         MadLibs game = new MadLibs();
         game.printInstructions();
+        game.play();
     }
 }
