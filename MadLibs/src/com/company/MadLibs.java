@@ -90,6 +90,6 @@ public class MadLibs {
     }
 
     public void printInstructions() {
-        System.out.println("Welcome to the Madlibs game.");
+        System.out.println("Welcome to the Madlibs game. If you type in words, we'll give you a story.");
     }
 }
