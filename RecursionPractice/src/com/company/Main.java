@@ -34,6 +34,17 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.println(power(5,5));
+        System.out.println(convertFromBaseTenToBinary(2));
+    }
+
+    public static int convertFromBaseTenToBinary(int number) {
+        if (number == 0) {
+            return 0;
+        } else if (number == 1) {
+            return 1;
+        } else {
+            int nums = number % 2;
+            return Integer.parseInt(Integer.toString(nums) + convertFromBaseTenToBinary(number / 2));
+        }
     }
 }
