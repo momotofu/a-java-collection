@@ -42,7 +42,6 @@ public class LibraryCatalog {
         return this.initialLateFee;
     }
 
-
     public double getFeePerLateDay() {
         return this.feePerLateDay;
     }
@@ -58,9 +57,20 @@ public class LibraryCatalog {
 
     // Instance methods
     public void checkOutBook (String title) {
+        Book book = getBook(title);
 
+        if (book.getIsCheckedOut()) {
+            sorryBookAlreadyCheckedOut(book);
+        } else {
+            book.setIsCheckedOut(true, getCurrentDay());
+            System.out.println("You just checked out " + title + ". " +
+            "It is due on " + getCurrentDay() + getLengthOfCheckOutPeriod() + ".");
+        }
     }
 
+    public void sorryBookAlreadyCheckedOut(Book book) {
+
+    }
 
     public void returnBook (String title) {
 
