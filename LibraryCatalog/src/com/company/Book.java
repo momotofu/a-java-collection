@@ -40,5 +40,12 @@ public class Book {
 
 
     // Setters
+    public void setIsCheckedOut(boolean isCheckedOut, int dayCheckedOut) {
+        this.isCheckedOut = isCheckedOut;
+        setDayCheckedOut(dayCheckedOut);
+    }
     
+    public void setDayCheckedOut(int dayCheckedOut) {
+        this.dayCheckedOut = dayCheckedOut;
+    }
 }
