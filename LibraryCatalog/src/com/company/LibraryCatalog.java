@@ -48,4 +48,21 @@ public class LibraryCatalog {
     }
 
     // Setters
+    public int nextDay() {
+        return currentDay++;
+    }
+
+    public void setDay(int day) {
+        this.currentDay = day;
+    }
+
+    // Instance methods
+    public void checkOutBook (String title) {
+
+    }
+
+
+    public void returnBook (String title) {
+
+    }
 }
