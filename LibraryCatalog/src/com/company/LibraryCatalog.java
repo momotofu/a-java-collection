@@ -69,7 +69,8 @@ public class LibraryCatalog {
     }
 
     public void sorryBookAlreadyCheckedOut(Book book) {
-
+        System.out.println("Sorry, " + book.getTitle() + " is already checked out." +
+        "It should be back on day " + book.getDayCheckdOut() + getLengthOfCheckOutPeriod() + ".");
     }
 
     public void returnBook (String title) {
