@@ -44,7 +44,7 @@ public class Book {
         this.isCheckedOut = isCheckedOut;
         setDayCheckedOut(dayCheckedOut);
     }
-    
+
     public void setDayCheckedOut(int dayCheckedOut) {
         this.dayCheckedOut = dayCheckedOut;
     }
