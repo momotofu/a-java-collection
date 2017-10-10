@@ -34,6 +34,9 @@ public class LibraryCatalog {
         return this.getLengthOfCheckOutPeriod;
     }
 
+    public Book getBook(String bookTitle) {
+        return bookCollection.get(bookTitle);
+    }
 
     public double getInitialLateFee() {
         return this.initialLateFee;
@@ -43,6 +46,6 @@ public class LibraryCatalog {
     public double getFeePerLateDay() {
         return this.feePerLateDay;
     }
-    
+
     // Setters
 }
