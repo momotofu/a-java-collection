@@ -31,7 +31,7 @@ public class LibraryCatalog {
     }
 
     public int getLengthOfCheckOutPeriod() {
-        return this.getLengthOfCheckOutPeriod;
+        return this.getLengthOfCheckOutPeriod();
     }
 
     public Book getBook(String bookTitle) {
