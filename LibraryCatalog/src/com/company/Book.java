@@ -2,6 +2,7 @@ package com.company;
 
 public class Book {
 
+    // Properties, Fields, Global Variables
     String title;
     int pageCount;
     int ISBN;
@@ -15,4 +16,29 @@ public class Book {
         this.ISBN = ISBN;
         isCheckedOut = false;
     }
+
+    // Getters
+    public String getTitle() {
+        return this.title;
+    }
+
+    public int getPageCount() {
+        return this.pageCount;
+    }
+
+    public int getISBN() {
+        return this.ISBN;
+    }
+
+    public boolean getIsCheckedOut() {
+        return this.isCheckedOut;
+    }
+
+    public int getDayCheckdOut() {
+        return this.dayCheckedOut;
+    }
+
+
+    // Setters
+    
 }
