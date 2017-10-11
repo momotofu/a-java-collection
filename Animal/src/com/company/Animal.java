@@ -1,7 +1,11 @@
 package com.company;
 
 public class Animal {
-    public int age;
+    private int age;
+
+    public int getAge() {
+        return this.age;
+    }
 
     public void setAge(int age) {
         this.age = age;
