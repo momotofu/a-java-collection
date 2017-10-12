@@ -14,4 +14,12 @@ public class Dog extends Animal {
     public void run() {
         System.out.println("The dog is running.");
     }
+
+    public void eat() {
+        System.out.println("The dog is easting");
+    }
+
+    public void sleep() {
+        System.out.println("The dog is sleeping.");
+    }
 }

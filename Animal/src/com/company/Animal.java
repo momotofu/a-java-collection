@@ -16,7 +16,9 @@ public abstract class Animal {
         System.out.println("An animal object has been created.");
     }
 
-    public void eat() {
-        System.out.println("An animal is eating.");
+    public void sleep() {
+        System.out.println("An animal is sleeping.");
     }
+
+    public abstract void eat();
 }

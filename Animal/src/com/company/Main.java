@@ -7,13 +7,12 @@ public class Main {
         Dog dog = new Dog();
         Cat cat = new Cat(7);
 
-        dog.bark();
-        cat.meow();
-        cat.eat();
-        dog.eat();
-        dog.run();
-        cat.prance();
-        cat.getAge();
-        dog.getAge();
+        // what happens when..
+        Dog doggy = new Dog();
+        if (doggy instanceof Animal) {
+            Animal animal = (Animal) doggy;
+            doggy.sleep();
+        }
+        doggy.sleep();
     }
 }
