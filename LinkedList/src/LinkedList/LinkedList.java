@@ -63,17 +63,16 @@ public class LinkedList {
     }
 
     // remove
-    public int remove(int index) {
-        if (index == 0) {
-            return -1;
-        }
-
+    public void remove() {
         Node current = head;
-        if (index < count) {
-            for (int i = 0; i < index - 1; i++) {
-                // set current to node before target
 
+        if (count > 1) {
+            while (current.getNext().getNext() != null) {
+                current = current.getNext();
             }
         }
+
+        current.setNext(null);
+        count--;
     }
 }
