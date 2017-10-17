@@ -51,7 +51,11 @@ public class LinkedList {
 
         return current.getData();
     }
+
     // size
+    public int size() {
+        return count;
+    }
 
     // isEmpty
 
