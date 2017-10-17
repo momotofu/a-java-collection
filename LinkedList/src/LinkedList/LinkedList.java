@@ -58,6 +58,22 @@ public class LinkedList {
     }
 
     // isEmpty
+    public boolean isEmpty() {
+        return head == null;
+    }
 
     // remove
+    public int remove(int index) {
+        if (index == 0) {
+            return -1;
+        }
+
+        Node current = head;
+        if (index < count) {
+            for (int i = 0; i < index - 1; i++) {
+                // set current to node before target
+
+            }
+        }
+    }
 }
