@@ -39,7 +39,18 @@ public class LinkedList {
     }
 
     // Get
+    public int get(int index) {
+        if (index <= 0) {
+            return -1;
+        }
 
+        Node current = head;
+        for (int i = 1; i < index; i++) {
+            current = current.getNext();
+        }
+
+        return current.getData();
+    }
     // size
 
     // isEmpty
