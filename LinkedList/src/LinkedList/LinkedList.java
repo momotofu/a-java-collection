@@ -6,10 +6,10 @@ public class LinkedList {
     int count;
 
     // Constructors
-//    public LinkedList() {
-//        head = null;
-//        count = 0;
-//    }
+    public LinkedList() {
+        head = null;
+        count = 0;
+    }
 
     public LinkedList(Node head) {
         this.head = head;
@@ -21,14 +21,20 @@ public class LinkedList {
     // Add
     public void add(int data) {
         Node newNode = new Node(data);
-        Node current = head;
 
-        // find the end of the list
-        while(current.getNext() != null) {
-            current = current.getNext();
+        if (count == 0) {
+            head = newNode;
+        } else {
+            Node current = head;
+
+            // find the end of the list
+            while(current.getNext() != null) {
+                current = current.getNext();
+            }
+
+            current.setNext(newNode);
         }
 
-        current.setNext(newNode);
         count++;
     }
 
