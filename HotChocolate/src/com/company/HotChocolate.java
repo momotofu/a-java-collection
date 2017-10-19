@@ -10,6 +10,8 @@ public class HotChocolate {
             throw new TooHotException();
         } else if (temp <= tooCold) {
             throw new TooColdException();
+        } else {
+            System.out.println("Mhmmhum.. the temp is just right! Yummy.");
         }
     }
 }
