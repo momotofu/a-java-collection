@@ -1,8 +1,10 @@
 package com.company;
 
+import java.util.concurrent.TimeUnit;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 	// write your code here
         double currentLiquidTemp = 130;
         boolean wrongTemp = !(currentLiquidTemp >= 180 && currentLiquidTemp <= 160);
@@ -20,6 +22,7 @@ public class Main {
             } catch (TemperatureException e) {
                 e.printStackTrace();
             }
+            TimeUnit.SECONDS.sleep(2);
         }
     }
 }
