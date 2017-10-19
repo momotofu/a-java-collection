@@ -32,21 +32,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TooColdException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TooColdException.java">
+      <file leaf-file-name="TooHotException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TooHotException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="57" lean-forward="false" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TooHotException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TooHotException.java">
+      <file leaf-file-name="TooColdException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TooColdException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -56,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/TemperatureException.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+              <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -80,9 +80,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/company/HotChocolate.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TemperatureException.java" />
         <option value="$PROJECT_DIR$/src/com/company/TooColdException.java" />
         <option value="$PROJECT_DIR$/src/com/company/TooHotException.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TemperatureException.java" />
       </list>
     </option>
   </component>
@@ -243,18 +243,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TooColdException.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/TooHotException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="57" lean-forward="false" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TooHotException.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/TooColdException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -262,7 +262,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/TemperatureException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+          <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
           <folding />
         </state>
       </provider>
