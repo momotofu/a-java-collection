@@ -4,7 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        double currentLiquidTemp = 160;
+        double currentLiquidTemp = 200;
+        boolean wrongTemp = true;
 
         try {
             HotChocolate.drink(currentLiquidTemp);
