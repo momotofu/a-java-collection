@@ -29,7 +29,7 @@ public class Queue {
 
     public int peek() {
         if (!isEmpty()) {
-            return queue.getFirst();
+            return (int) queue.getFirst();
         } else {
             return -1;
         }
