@@ -13,7 +13,7 @@ public class Main {
 
         // Add to stack
         for (int i = 0; i < string.length(); i++) {
-            stack.push(Character.toString(string.charAt(0)));
+            stack.push(Character.toString(string.charAt(i)));
         }
 
         // Pop from stack getting reverse ordered string
@@ -39,18 +39,21 @@ public class Main {
 //        puts(Q.size());
 
         // LIFO
-        Stack stack = new Stack();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        puts("size of stack: " + stack.size());
-        stack.push(4);
-        stack.push(5);
-        puts("peek: " + stack.peek());
-        puts("pop: " + stack.pop());
-        puts("pop: " + stack.pop());
-        puts("pop: " + stack.pop());
-        puts("pop: " + stack.pop());
-        puts("pop: " + stack.pop());
+//         Stack stack = new Stack();
+//         stack.push(1);
+//         stack.push(2);
+//         stack.push(3);
+//         puts("size of stack: " + stack.size());
+//         stack.push(4);
+//         stack.push(5);
+//         puts("peek: " + stack.peek());
+//         puts("pop: " + stack.pop());
+//         puts("pop: " + stack.pop());
+//         puts("pop: " + stack.pop());
+//         puts("pop: " + stack.pop());
+//         puts("pop: " + stack.pop());
+        puts(putsOpposite("Hello World"));
+        puts(putsOpposite("Oyasumi"));
+        puts(putsOpposite("Mizuho"));
     }
 }
