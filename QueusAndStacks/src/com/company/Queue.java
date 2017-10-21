@@ -26,4 +26,12 @@ public class Queue {
     public int dequeue() {
         return (int) queue.removeFirst();
     }
+
+    public int peek() {
+        if (!isEmpty()) {
+            return queue.getFirst();
+        } else {
+            return -1;
+        }
+    }
 }
