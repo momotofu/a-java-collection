@@ -23,7 +23,7 @@ public class Queue {
         queue.addLast(n);
     }
 
-    public void enqueue(int n) {
-        queue.removeFirst(n);
+    public int dequeue() {
+        return (int) queue.removeFirst();
     }
 }
