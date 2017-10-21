@@ -18,4 +18,12 @@ public class Queue {
     public int size() {
         return queue.size();
     }
+
+    public void enqueue(int n) {
+        queue.addLast(n);
+    }
+
+    public void enqueue(int n) {
+        queue.removeFirst(n);
+    }
 }
