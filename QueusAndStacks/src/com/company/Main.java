@@ -7,6 +7,23 @@ public class Main {
         System.out.println(obj);
     }
 
+    public static String putsOpposite(String string) {
+        Stack<String> stack = new Stack<String>();
+        String output = "";
+
+        // Add to stack
+        for (int i = 0; i < string.length(); i++) {
+            stack.push(Character.toString(string.charAt(0)));
+        }
+
+        // Pop from stack getting reverse ordered string
+        while (!stack.isEmpty()) {
+            output += stack.pop();
+        }
+
+        return output;
+    }
+
     public static void main(String[] args) {
 	// write your code here
         // FIFO & LIFO
