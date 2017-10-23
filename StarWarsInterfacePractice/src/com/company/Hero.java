@@ -7,6 +7,6 @@ public class Hero implements Character{
     }
 
     public void heal() {
-        
+
     }
 }
