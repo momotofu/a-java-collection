@@ -1,6 +1,8 @@
 package com.company;
 
 public class Enemy implements Character {
+    // Properties
+    public String weapon = "Lightsaber";
 
     // Constructor
     public Enemy() {
