@@ -1,16 +1,21 @@
 package com.company;
 
 public class Enemy implements Character {
+
     // Constructor
     public Enemy() {
 
     }
-    
-    public void attack() {
+
+    @Override public void attack() {
 
     }
 
-    public void heal() {
+    @Override public void heal() {
+
+    }
+
+    public void weaponDraw() {
 
     }
 }
