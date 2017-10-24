@@ -1,7 +1,7 @@
 package com.company;
 
 public class Person {
-    String hairColor:
+    HairColor hairColor = HairColor.RED;
 
     public Person() {
 
