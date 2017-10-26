@@ -5,18 +5,9 @@ import java.util.Arrays;
 public class Main {
 
     public static <E> void printArray(E[] array) {
-        String outPut = "[";
-
-        for (int i = 0; i < array.length; i++) {
-            outPut += array[i];
-
-            if (i == array.length - 1) {
-                outPut += "]";
-            } else {
-                outPut += ", ";
-            }
+        for (E element : array) {
+            System.out.println(element);
         }
-        System.out.println(outPut);
     }
 
     public static void main(String[] args) {
