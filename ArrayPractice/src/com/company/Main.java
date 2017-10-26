@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Main {
 
-    public static void printArray(int[] array) {
+    public static <E> void printArray(E[] array) {
         String outPut = "[";
 
         for (int i = 0; i < array.length; i++) {
