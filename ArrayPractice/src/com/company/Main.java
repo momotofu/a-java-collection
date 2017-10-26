@@ -22,5 +22,6 @@ public class Main {
 
         String[] stringArray1 = {"bananas", "apples", "oranges", "mangos", "kiwis"};
         printArray(array3);
+        System.out.println(Arrays.toString(array3));
     }
 }
