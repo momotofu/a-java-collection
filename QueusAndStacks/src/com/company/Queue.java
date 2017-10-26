@@ -2,9 +2,9 @@ package com.company;
 
 import java.util.LinkedList;
 
-public class Queue {
+public class Queue<T> {
     // Properties
-    LinkedList queue;
+    LinkedList<T> queue;
 
     // Constructor
     public Queue() {
@@ -19,19 +19,15 @@ public class Queue {
         return queue.size();
     }
 
-    public void enqueue(int n) {
+    public void enqueue(T n) {
         queue.addLast(n);
     }
 
-    public int dequeue() {
-        return (int) queue.removeFirst();
+    public T dequeue() {
+        return queue.removeFirst();
     }
 
-    public int peek() {
-        if (!isEmpty()) {
-            return (int) queue.getFirst();
-        } else {
-            return -1;
-        }
+    public T peek() {
+        return queue.getFirst();
     }
 }

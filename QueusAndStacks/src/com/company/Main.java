@@ -27,18 +27,18 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         // FIFO & LIFO
-//        Queue Q = new Queue();
-//
-//        puts(Q.isEmpty());
-//        Q.enqueue(5);
-//        Q.enqueue(9);
-//        Q.enqueue(6);
-//        Q.enqueue(1);
-//        puts(Q.peek());
-//        puts(Q.dequeue());
-//        puts(Q.size());
+        Queue Q = new Queue();
 
-        // LIFO
+        puts(Q.isEmpty());
+        Q.enqueue(5);
+        Q.enqueue(9);
+        Q.enqueue(6);
+        Q.enqueue(1);
+        puts(Q.peek());
+        puts(Q.dequeue());
+        puts(Q.size());
+
+//         LIFO
 //         Stack stack = new Stack();
 //         stack.push(1);
 //         stack.push(2);
@@ -52,8 +52,8 @@ public class Main {
 //         puts("pop: " + stack.pop());
 //         puts("pop: " + stack.pop());
 //         puts("pop: " + stack.pop());
-        puts(putsOpposite("Hello World"));
-        puts(putsOpposite("Oyasumi"));
-        puts(putsOpposite("Mizuho"));
+//        puts(putsOpposite("Hello World"));
+//        puts(putsOpposite("Oyasumi"));
+//        puts(putsOpposite("Mizuho"));
     }
 }
