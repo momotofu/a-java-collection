@@ -12,4 +12,11 @@ public class NonEmptyBST<D extends Comparable> implements Tree<D> {
         right = new EmptyBST();
     }
 
+    public boolean isEmpty() {
+        return false;
+    }
+
+    public int cardinality() {
+        return 1 + left.cardinality() + right.cardinality();
+    }
 }
