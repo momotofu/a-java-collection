@@ -12,6 +12,7 @@ public class NonEmptyBST<D extends Comparable> implements Tree<D> {
         right = new EmptyBST();
     }
 
+    // comply with Tree interface
     public boolean isEmpty() {
         return false;
     }
