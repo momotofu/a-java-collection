@@ -1,5 +1,6 @@
 package com.company;
 
+import java.text.MessageFormat;
 import java.util.Optional;
 
 public class TicTacToe {
@@ -13,10 +14,15 @@ public class TicTacToe {
 
     // Constructor
     public TicTacToe(char userMarker, char AiMarker) {
-        self.userMarker = userMarker;
-        self.AiMarker = AiMarker;
-        self.winner = '-';
-        self.setBoard();
+        this.userMarker = userMarker;
+        this.AiMarker = AiMarker;
+        this.winner = '-';
+        this.setBoard();
+    }
+
+    // Getters
+    public char[] getBoard() {
+        return this.board;
     }
 
     public char[] setBoard() {
@@ -49,20 +55,45 @@ public class TicTacToe {
     public void printBoard() {
         System.out.println();
 
-        for (int i = 0; i < board.length; i++) {
+        for (int i = 0; i < getBoard().length; i++) {
             if (i % 3 == 0 && i != 0) {
-                puts();
-                puts("----------------");
+                System.out.println();
+                System.out.println("---------------");
             }
+            System.out.print("|" + board[i]);
         }
-    }
 
-    private void puts() {
         System.out.println();
     }
 
-    public void puts(Object input) {
-        System.out.println(input);
+    public void printIndexBoard() {
+        System.out.println();
+
+        for (int i = 0; i < getBoard().length; i++) {
+            if (i % 3 == 0 && i != 0) {
+                System.out.println();
+                System.out.println("---------------");
+            }
+            System.out.print("|" + i + 1);
+        }
+
+        System.out.println();
+    }
+
+    public boolean isThereAWinnter() {
+        boolean diagonalsAndMiddle = rightDia() || leftDia() || secondRow() || secondCol() && board[4] != '-';
+        boolean leftTop = firstCol() || firstRow() && board[0] != '-';
+        boolean rightBottom = thirdCol() || thirdRow() && board[8] != '-';
+
+        if (diagonalsAndMiddle) {
+            winner = board[4];
+        } else if (leftTop) {
+            winner = board[0];
+        } else {
+            winner = board[8];
+        }
+
+        return diagonalsAndMiddle || leftTop || rightBottom;
     }
 }
 
