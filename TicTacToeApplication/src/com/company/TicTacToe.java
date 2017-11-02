@@ -39,5 +39,9 @@ public class TicTacToe {
     public boolean isInRange(int number) {
         return 0 < number && board.length + 1 > number;
     }
+
+    public boolean isSpotTaken(int number) {
+        return board[number - 1] != '-';
+    }
 }
 
