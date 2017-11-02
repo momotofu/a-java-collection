@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Optional;
 
-public class TicTacToe<T> {
+public class TicTacToe {
 
     // Properties
     protected char[] board;
@@ -52,6 +52,7 @@ public class TicTacToe<T> {
         for (int i = 0; i < board.length; i++) {
             if (i % 3 == 0 && i != 0) {
                 puts();
+                puts("----------------");
             }
         }
     }
@@ -60,7 +61,7 @@ public class TicTacToe<T> {
         System.out.println();
     }
 
-    public void puts(T input) {
+    public void puts(Object input) {
         System.out.println(input);
     }
 }
