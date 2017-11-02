@@ -28,12 +28,16 @@ public class TicTacToe {
     }
 
     public boolean playTurn(int spot) {
-        boolean isValid = withinRange(spot) && !isSpotTaken(spot);
+        boolean isValid = isInRange(spot) && !isSpotTaken(spot);
         if (isValid) {
             board[spot - 1] = currentMarker;
             currentMarker = currentMarker == AiMarker ? userMarker : AiMarker;
         }
         return isValid;
+    }
+
+    public boolean isInRange(int number) {
+        return 0 < number && board.length + 1 > number;
     }
 }
 
