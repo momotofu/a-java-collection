@@ -1,6 +1,8 @@
 package com.company;
 
-public class TicTacToe {
+import java.util.Optional;
+
+public class TicTacToe<T> {
 
     // Properties
     protected char[] board;
@@ -42,6 +44,24 @@ public class TicTacToe {
 
     public boolean isSpotTaken(int number) {
         return board[number - 1] != '-';
+    }
+
+    public void printBoard() {
+        System.out.println();
+
+        for (int i = 0; i < board.length; i++) {
+            if (i % 3 == 0 && i != 0) {
+                puts();
+            }
+        }
+    }
+
+    private void puts() {
+        System.out.println();
+    }
+
+    public void puts(T input) {
+        System.out.println(input);
     }
 }
 
