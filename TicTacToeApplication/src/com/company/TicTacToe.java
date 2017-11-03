@@ -138,7 +138,13 @@ public class TicTacToe {
     }
 
     public String gameOver() {
-        boolean didSomeoneWin = isThereAWinner();
+        if (isThereAWinner()) {
+            return "We have a winner! The winner is " + this.winner + "'s";
+        } else if (isBoardFilled()) {
+            return "It's a draw!";
+        } else {
+            return "It's not over yet!";
+        }
     }
 }
 
