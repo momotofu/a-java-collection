@@ -127,5 +127,14 @@ public class TicTacToe {
     public boolean thirdCol() {
         return board[2] == board[5] && board[5] == board[8];
     }
+
+    public boolean isBoardFilled() {
+        for (int i = 0; i < board.length; i++) {
+            if (board[i] == '-') {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
