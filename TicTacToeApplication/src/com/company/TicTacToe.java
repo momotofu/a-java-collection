@@ -95,5 +95,37 @@ public class TicTacToe {
 
         return diagonalsAndMiddle || leftTop || rightBottom;
     }
+
+    public boolean rightDia() {
+        return board[2] == board[4] && board[4] == board[6];
+    }
+
+    public boolean leftDia() {
+        return board[0] == board[4] && board[4] == board[8];
+    }
+
+    public boolean firstRow() {
+        return board[0] == board[1] && board[1] == board[2];
+    }
+
+    public boolean secondRow() {
+        return board[3] == board[4] && board[4] == board[5];
+    }
+
+    public boolean thirdRow() {
+        return board[6] == board[7] && board[7] == board[8];
+    }
+
+    public boolean firstCol() {
+        return board[0] == board[3] && board[3] == board[6];
+    }
+
+    public boolean secondCol() {
+        return board[1] == board[4] && board[4] == board[7];
+    }
+
+    public boolean thirdCol() {
+        return board[2] == board[5] && board[5] == board[8];
+    }
 }
 
