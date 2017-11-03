@@ -2,6 +2,7 @@ package com.company;
 
 import java.text.MessageFormat;
 import java.util.Optional;
+import java.util.Random;
 
 public class TicTacToe {
 
@@ -17,7 +18,9 @@ public class TicTacToe {
         this.userMarker = userMarker;
         this.AiMarker = AiMarker;
         this.winner = '-';
-        this.setBoard();
+        this.board = setBoard();
+        Random rand = new Random();
+        this.currentMarker = rand.nextInt() % 2 == 0 ? userMarker : AiMarker;
     }
 
     // Getters
@@ -57,12 +60,14 @@ public class TicTacToe {
 
         for (int i = 0; i < getBoard().length; i++) {
             if (i % 3 == 0 && i != 0) {
+                System.out.print("|");
                 System.out.println();
-                System.out.println("---------------");
+                System.out.println("-------------");
             }
-            System.out.print("|" + board[i]);
+            System.out.print("| " + board[i] + " ");
         }
-
+        System.out.print("|");
+        System.out.println();
         System.out.println();
     }
 
@@ -71,19 +76,21 @@ public class TicTacToe {
 
         for (int i = 0; i < getBoard().length; i++) {
             if (i % 3 == 0 && i != 0) {
+                System.out.print("|");
                 System.out.println();
-                System.out.println("---------------");
+                System.out.println("-------------");
             }
-            System.out.print("|" + i + 1);
+            System.out.print("| " + (i + 1) + " ");
         }
-
+        System.out.print("|");
+        System.out.println();
         System.out.println();
     }
 
     public boolean isThereAWinner() {
-        boolean diagonalsAndMiddle = rightDia() || leftDia() || secondRow() || secondCol() && board[4] != '-';
-        boolean leftTop = firstCol() || firstRow() && board[0] != '-';
-        boolean rightBottom = thirdCol() || thirdRow() && board[8] != '-';
+        boolean diagonalsAndMiddle = (rightDia() || leftDia() || secondRow() || secondCol()) && board[4] != '-';
+        boolean leftTop = (firstCol() || firstRow()) && board[0] != '-';
+        boolean rightBottom = (thirdCol() || thirdRow()) && board[8] != '-';
 
         if (diagonalsAndMiddle) {
             winner = board[4];

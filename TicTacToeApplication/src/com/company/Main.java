@@ -53,11 +53,20 @@ public class Main {
                 // Print new board
                 System.out.println();
                 game.printBoard();
+                System.out.println();
+                game.printIndexBoard();
             }
             System.out.println(game.gameOver());
             System.out.println();
 
             // Set up a new game or not depending on the response
+            System.out.println("Do you want to play again? " +
+                    " Type Y for yes and N for now");
+            boolean continueGame = sc.next().charAt(0) == 'Y' ? true : false;
+            if (!continueGame) {
+                playing = false;
+                System.out.println("Game Over! Good Bye! No more chocolate cake for you...");
+            }
         }
     }
 }
