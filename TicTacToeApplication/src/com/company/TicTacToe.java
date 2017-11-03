@@ -80,7 +80,7 @@ public class TicTacToe {
         System.out.println();
     }
 
-    public boolean isThereAWinnter() {
+    public boolean isThereAWinner() {
         boolean diagonalsAndMiddle = rightDia() || leftDia() || secondRow() || secondCol() && board[4] != '-';
         boolean leftTop = firstCol() || firstRow() && board[0] != '-';
         boolean rightBottom = thirdCol() || thirdRow() && board[8] != '-';
@@ -135,6 +135,10 @@ public class TicTacToe {
             }
         }
         return true;
+    }
+
+    public String gameOver() {
+        boolean didSomeoneWin = isThereAWinner();
     }
 }
 
