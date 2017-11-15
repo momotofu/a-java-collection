@@ -42,8 +42,6 @@ public class Main {
                 puts();
                 puts(game.drawPicture());
                 puts();
-                puts(game.getFormalCurrentGuess());
-                puts(game.mysteryWord);
 
                 // get user guess
                 char guess = scanner.next().toLowerCase().charAt(0);

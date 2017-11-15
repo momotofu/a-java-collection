@@ -134,7 +134,7 @@ public class HangmanGame {
     }
 
     public boolean gameWon() {
-       return currentGuess.toString().replaceAll(" ", "") == mysteryWord;
+       return currentGuess.toString().replaceAll(" ", "").equals(mysteryWord);
     }
 
     public boolean gameLost() {
