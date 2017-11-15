@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 import static com.company.Main.puts;
 
@@ -50,7 +51,8 @@ public class HangmanGame {
     }
 
     public String pickWord() {
-        return "s";
+        Random rand = new Random();
+        return wordList.get(Math.abs(rand.nextInt()) % (wordList.size() - 1));
     }
 
     public StringBuilder getCurrentGuess() {
