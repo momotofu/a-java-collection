@@ -25,5 +25,16 @@ public class HangmanGame {
         currentGuess = initializeCurrentGuess();
     }
 
-    
+    // Methods
+    public void initializeStreams() throws IOException {
+        
+    }
+
+    public String pickWord() {
+        return "s";
+    }
+
+    public StringBuilder getCurrentGuess() {
+        return currentGuess;
+    }
 }
