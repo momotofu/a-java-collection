@@ -35,6 +35,17 @@ public class HangmanGame {
     }
 
     // Methods
+    public String drawCurrentGuesses() {
+        int paddingAmount = (19 - (mysteryWord.length() * 2)) / 2;
+        String curGuess = currentGuess.toString();
+
+        for (int i = 0; i < paddingAmount; i++) {
+            curGuess = " " + curGuess + " ";
+        }
+
+        return curGuess + " ";
+    }
+
     public StringBuilder initializeCurrentGuess() {
         StringBuilder current = new StringBuilder();
         for (int i = 0; i < mysteryWord.length() * 2; i++) {
@@ -174,7 +185,7 @@ public class HangmanGame {
                 "|\"|\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"'\"|\"|\n" +
                 "| |                   | |\n" +
                 "| |                   | |\n" +
-                "| |    Bad guesses    | |\n" +
+                "| |"+drawCurrentGuesses()+"| |\n" +
                 "| |                   | |";
 
     }
@@ -202,7 +213,7 @@ public class HangmanGame {
                 "|\"|\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"'\"|\"|\n" +
                 "| |                   | |\n" +
                 "| |                   | |\n" +
-                "| |    Bad guesses    | |\n" +
+                "| |"+drawCurrentGuesses()+"| |\n" +
                 "| |                   | |";
     }
 
@@ -229,7 +240,7 @@ public class HangmanGame {
                 "|\"|\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"'\"|\"|\n" +
                 "| |                   | |\n" +
                 "| |                   | |\n" +
-                "| |    Bad guesses    | |\n" +
+                "| |"+drawCurrentGuesses()+"| |\n" +
                 "| |                   | |";
     }
 
@@ -256,7 +267,7 @@ public class HangmanGame {
                 "|\"|\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"'\"|\"|\n" +
                 "| |                   | |\n" +
                 "| |                   | |\n" +
-                "| |    Bad guesses    | |\n" +
+                "| |"+drawCurrentGuesses()+"| |\n" +
                 "| |                   | |";
     }
 
@@ -283,7 +294,7 @@ public class HangmanGame {
                 "|\"|\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"'\"|\"|\n" +
                 "| |                   | |\n" +
                 "| |                   | |\n" +
-                "| |    Bad guesses    | |\n" +
+                "| |"+drawCurrentGuesses()+"| |\n" +
                 "| |                   | |";
     }
 
@@ -310,7 +321,7 @@ public class HangmanGame {
                 "|\"|\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"'\"|\"|\n" +
                 "| |                   | |\n" +
                 "| |                   | |\n" +
-                "| |    Bad guesses    | |\n" +
+                "| |"+drawCurrentGuesses()+"| |\n" +
                 "| |                   | |";
     }
 
@@ -337,7 +348,7 @@ public class HangmanGame {
                 "|\"|\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"'\"|\"|\n" +
                 "| |                   | |\n" +
                 "| |                   | |\n" +
-                "| |    Last chance    | |\n" +
+                "| |"+drawCurrentGuesses()+"| |\n" +
                 "| |                   | |";
     }
 
@@ -364,7 +375,7 @@ public class HangmanGame {
                 "|\"|\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"'\"|\"|\n" +
                 "| |                   | |\n" +
                 "| |                   | |\n" +
-                "| |    Last chance    | |\n" +
+                "| |"+drawCurrentGuesses()+"| |\n" +
                 "| |                   | |";
     }
 
