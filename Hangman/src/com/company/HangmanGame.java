@@ -59,9 +59,32 @@ public class HangmanGame {
         StringBuilder current = new StringBuilder();
         for (int i = 0; i < current.length() * 2; i++) {
             if (i % 2 == 0) { current.append("_"); }
-            else { current.append(" ");
+            else { current.append(" "); }
         }
-        
+
         return current;
+    }
+
+    public String drawPicture() {
+            switch(currentTry) {
+                case 0:
+                    return noPersonDraw();
+                case 1:
+                    return addHeadDraw();
+                case 2:
+                    return addBodyDraw();
+                case 3:
+                    return addOneArmDraw();
+                case 4:
+                    return addTwoArmDraw();
+                default:
+                    return fullPersonDraw();
+            }
+    }
+
+    private String addHeadDraw() {
+    }
+
+    private String noPersonDraw() {
     }
 }
