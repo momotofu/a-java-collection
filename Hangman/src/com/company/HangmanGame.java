@@ -84,7 +84,7 @@ public class HangmanGame {
         return current;
     }
 
-    public boolean checkGuess(char guess) {
+    public boolean alreadyGuessed(char guess) {
         return previousGuesses.contains(guess);
     }
 
@@ -127,9 +127,9 @@ public class HangmanGame {
     }
 
     public boolean gameLost() {
-
+        return currentTry >= maxTries;
     }
-    
+
     public String drawPicture() {
             switch(currentTry) {
                 case 0:
