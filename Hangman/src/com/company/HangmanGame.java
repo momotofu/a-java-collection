@@ -16,7 +16,7 @@ public class HangmanGame {
     StringBuilder currentGuess;
     ArrayList<Character> previousGuesses = new ArrayList<>();
 
-    int maxTries = 6;
+    int maxTries = 7;
     int currentTry = 0;
 
     ArrayList<String> wordList = new ArrayList<>();
@@ -29,7 +29,25 @@ public class HangmanGame {
         currentGuess = initializeCurrentGuess();
     }
 
+    // Getters
+    public String getFormalCurrentGuess() {
+        return "Current Guess: " + currentGuess.toString();
+    }
+
     // Methods
+    public StringBuilder initializeCurrentGuess() {
+        StringBuilder current = new StringBuilder();
+        for (int i = 0; i < mysteryWord.length() * 2; i++) {
+            if (i % 2 == 0) {
+                current.append("_");
+            } else {
+                current.append(" ");
+            }
+        }
+
+        return current;
+    }
+
     public void initializeStreams() throws IOException {
         try {
             File inFile = new File("dictionary.txt");
@@ -40,6 +58,7 @@ public class HangmanGame {
             String currentLine = bufferedReader.readLine();
             while (currentLine != null) {
                 wordList.add(currentLine);
+                currentLine = bufferedReader.readLine();
             }
 
             // close file readers
@@ -65,6 +84,9 @@ public class HangmanGame {
         return current;
     }
 
+    public boolean gameOver() {
+        return true;
+    }
     public String drawPicture() {
             switch(currentTry) {
                 case 0:

@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -12,24 +13,48 @@ public class Main {
         System.out.println();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Properties
         boolean isPlaying = true;
+        boolean isReady = false;
 
         // Game instructions
 	    Scanner scanner = new Scanner(System.in);
 	    puts("Welcome to Hangman!");
 	    puts("I will pick a word. If you can guess that word in six your less tries you win.");
 	    puts("Are you ready?");
-	    puts();
+        puts();
+        puts("Type Y for Yes or N for No.");
+        puts();
+
+        while(!isReady) {
+            isReady = (scanner.next().toUpperCase().charAt(0) == 'Y');
+        }
 
         // Enter game loop
         while (isPlaying) {
             puts();
+            puts("Lets get started!");
 
-            while (!game.gameOver()) {
+            HangmanGame game = new HangmanGame();
 
-            }
+            do {
+                puts();
+                puts(game.drawPicture());
+                puts();
+                puts(game.getFormalCurrentGuess());
+                puts(game.mysteryWord);
+
+                // get user guess
+                char guess = scanner.next().toLowerCase().charAt(0);
+
+                while (!game.submitGuess(guess)) {
+                    puts("Whoops. Looks like you've already guessed that letter.");
+                    puts("Try again please.");
+                    puts();
+                    guess = scanner.next().toLowerCase().charAt(0);
+                }
+            } while (!game.gameOver());
 
             // prompt the user for another game
             puts("Do you want to play another game?"
