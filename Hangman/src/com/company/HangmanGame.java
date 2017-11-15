@@ -84,9 +84,52 @@ public class HangmanGame {
         return current;
     }
 
-    public boolean gameOver() {
-        return true;
+    public boolean checkGuess(char guess) {
+        return previousGuesses.contains(guess);
     }
+
+    public boolean submitGuess(char guess) {
+        boolean isGoodGuess = false;
+
+        for (int i = 0; i < mysteryWord.length(); i++) {
+            if (guess == mysteryWord.charAt(i)) {
+                currentGuess.setCharAt(i * 2, guess);
+                isGoodGuess = true;
+                previousGuesses.add(guess);
+            }
+        }
+
+        if (!isGoodGuess) {
+            currentTry++;
+        }
+
+        return isGoodGuess;
+    }
+
+    public boolean gameOver() {
+        if (gameWon()) {
+            puts();
+            puts("Aww yeah. You guessed it. The word is "
+            + mysteryWord + "!");
+            return true;
+        } else if (gameLost()) {
+            puts();
+            puts("Oh bummer. You lost. The word was "
+            + mysteryWord + "...");
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean gameWon() {
+       return currentGuess.toString().replaceAll(" ", "") == mysteryWord;
+    }
+
+    public boolean gameLost() {
+
+    }
+    
     public String drawPicture() {
             switch(currentTry) {
                 case 0:

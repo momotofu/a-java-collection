@@ -48,11 +48,17 @@ public class Main {
                 // get user guess
                 char guess = scanner.next().toLowerCase().charAt(0);
 
-                while (!game.submitGuess(guess)) {
+                while (!game.checkGuess(guess)) {
                     puts("Whoops. Looks like you've already guessed that letter.");
                     puts("Try again please.");
                     puts();
                     guess = scanner.next().toLowerCase().charAt(0);
+                } else {
+                    if (game.submitGuess(guess)) {
+                        puts("You guessed wisely.");
+                    } else {
+                        puts("You guessed poorly.");
+                    }
                 }
             } while (!game.gameOver());
 
