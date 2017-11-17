@@ -35,6 +35,8 @@ public class Main {
         int[] sums = new int[c.length];
         HashMap<Character, Integer> map = new HashMap<>();
 
+        // fill hashmap with unique char keys and increment
+        // value for duplicate occurances
         for (int i = 0; i < s.length(); i++) {
             if (!map.containsKey(s.charAt(i))) {
                 map.put(s.charAt(i), 1);
@@ -43,6 +45,18 @@ public class Main {
                 map.put(s.charAt(i), sum+1);
             }
         }
+
+        // then loop through chars in c array
+        // if there is a match then add value to sums
+        for (int j = 0; j < c.length; j++) {
+            int sum;
+            if (!map.containsKey(c[j])) {
+                sums[j] = 0;
+            } else {
+                sums[j] = map.get(c[j]);
+            }
+        }
+
         return sums;
     }
 
