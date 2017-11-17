@@ -1,6 +1,9 @@
 package com.company;
 
+import javax.lang.model.type.ArrayType;
 import java.util.HashMap;
+import java.util.concurrent.Callable;
+import java.util.function.Function;
 
 public class Main {
 
@@ -31,15 +34,26 @@ public class Main {
        // Optimal time O(n + m)
         int[] sums = new int[c.length];
         HashMap<Character, Integer> map = new HashMap<>();
-        System.out.println("Hashmap: " + map.toString());
 
+        for (int i = 0; i < s.length(); i++) {
+            if (!map.containsKey(s.charAt(i))) {
+                map.put(s.charAt(i), 1);
+            } else {
+                int sum = map.get(s.charAt(i));
+                map.put(s.charAt(i), sum+1);
+            }
+        }
         return sums;
     }
 
     public static void main(String[] args) {
 	// write your code here
+
+        char[] a = {'a', 'b', 'c'};
+
         long startTime = System.currentTimeMillis();
         long endTime = System.currentTimeMillis();
+        findNumberOfRepetitionsV2("hello", a);
         long duration = endTime - startTime;
         System.out.println("Duration: " + duration + "ms");
     }
