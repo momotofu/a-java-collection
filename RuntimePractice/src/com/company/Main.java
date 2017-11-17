@@ -17,9 +17,10 @@ public class Main {
         int[] sums = new int[c.length];
         for (int i = 0; i < s.length(); i++) {
             for (int j = 0; j < c.length; j++) {
-
+                sums[j] = sums[j] + 1;
             }
         }
+        return sums;
     }
 
     public static void main(String[] args) {
