@@ -13,8 +13,11 @@ public class Main {
         return sum;
     }
 
-    public static int findNumberOfRepititionsV1(String s, char c) {
-
+    public static int[] findNumberOfRepititionsV1(String s, char[] c) {
+        int[] sums = new int[c.length];
+        for (int i = 0; i < s.length(); i++) {
+            
+        }
     }
 
     public static void main(String[] args) {
