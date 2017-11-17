@@ -2,10 +2,17 @@ package com.company;
 
 public class Main {
 
-    public static int findNumberOfRepititions() {
+    public static int findNumberOfRepititions(String s, char c) {
+        int sum = 0;
 
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == c) {
+                sum += 1;
+            }
+        }
+        return sum;
     }
-    
+
     public static void main(String[] args) {
 	// write your code here
         long startTime = System.currentTimeMillis();
