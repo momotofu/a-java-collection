@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.HashMap;
+
 public class Main {
 
     public static int findNumberOfRepititions(String s, char c) {
@@ -14,13 +16,23 @@ public class Main {
         return sum;
     }
 
-    public static int[] findNumberOfRepititionsV1(String s, char[] c) {
+    public static int[] findNumberOfRepetitionsV1(String s, char[] c) {
+        // Quad time O(n * m)
         int[] sums = new int[c.length];
         for (int i = 0; i < s.length(); i++) {
             for (int j = 0; j < c.length; j++) {
                 sums[j] = sums[j] + 1;
             }
         }
+        return sums;
+    }
+
+    public static int[] findNumberOfRepetitionsV2(String s, char[] c) {
+       // Optimal time O(n + m)
+        int[] sums = new int[c.length];
+        HashMap<Character, Integer> map = new HashMap<>();
+        System.out.println("Hashmap: " + map.toString());
+
         return sums;
     }
 
