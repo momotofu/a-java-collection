@@ -16,8 +16,8 @@ public class Main {
     public static int[] findNumberOfRepititionsV1(String s, char[] c) {
         int[] sums = new int[c.length];
         for (int i = 0; i < s.length(); i++) {
-            for (int j = 0; j < s.length(); j++) {
-                
+            for (int j = 0; j < c.length; j++) {
+
             }
         }
     }
