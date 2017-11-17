@@ -3,6 +3,7 @@ package com.company;
 public class Main {
 
     public static int findNumberOfRepititions(String s, char c) {
+        // Linear time O(n)
         int sum = 0;
 
         for (int i = 0; i < s.length(); i++) {
