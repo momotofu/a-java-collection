@@ -43,9 +43,11 @@ public class NonEmptyBST<D extends Comparable> implements Tree<D> {
         if (el == data) {
             return this;
         } else {
-            if (el.compareTo(el) < 0) {
+            if (el.compareTo(data) < 0) {
+                System.out.println("added left");
                 return new NonEmptyBST<D>(data, left.add(el), right);
             } else {
+                System.out.println("added right");
                 return new NonEmptyBST<D>(data, left, right.add(el));
             }
         }
