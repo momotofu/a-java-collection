@@ -16,4 +16,8 @@ public class Testers {
 
         return false;
     }
+
+    public static void checkAddMemberCardinality(Tree t, int x) throws Exception {
+        int newTree = (t.add(x)).cardinality();
+    }
 }
