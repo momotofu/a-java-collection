@@ -18,5 +18,17 @@ public class Main {
         Testers.checkAddMemberCardinality(e, 5);
         Testers.checkAddMemberCardinality(f, 5);
         Testers.checkAddMemberCardinality(f, 6);
+
+        int tests = 1000;
+        for (int i = 0; i < tests; i++) {
+            Tree t;
+            if (i % 10 == 0) {
+                t = Testers.randomTree(0);
+            } else {
+                t = Testers.randomTree(10);
+            }
+
+            Testers.checkAddMemberCardinality(t, i);
+        }
     }
 }
