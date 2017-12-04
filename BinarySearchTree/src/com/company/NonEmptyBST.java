@@ -10,6 +10,7 @@ public class NonEmptyBST<D extends Comparable> implements Tree<D> {
         data = el;
         left = new EmptyBST();
         right = new EmptyBST();
+        System.out.println("data: " + el.toString());
     }
 
     public NonEmptyBST(D data, Tree<D> leftTree, Tree<D> rightTree) {
@@ -24,6 +25,7 @@ public class NonEmptyBST<D extends Comparable> implements Tree<D> {
     }
 
     public int cardinality() {
+        System.out.println("cardinality called");
         return 1 + left.cardinality() + right.cardinality();
     }
 

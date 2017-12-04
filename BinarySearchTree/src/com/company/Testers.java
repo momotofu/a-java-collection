@@ -15,7 +15,6 @@ public class Testers {
         } else {
             return randomTree(size - 1).add(randomInt(0, 50));
         }
-
     }
 
     public static boolean checkIsEmpty(Tree t) throws Exception {
