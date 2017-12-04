@@ -2,6 +2,10 @@ package com.company;
 
 public class Testers {
 
+    public static int randomInt() {
+        
+    }
+
     public static boolean checkIsEmpty(Tree t) throws Exception {
         // if instance of t is an EmptyBST then it should return true
         // otherwise it should return false
