@@ -9,6 +9,15 @@ public class Testers {
         return rand.nextInt((max - min) + 1) + min;
     }
 
+    public static Tree randomTree(int size) {
+        if (size == 0) {
+            return new EmptyBST();
+        } else {
+            return randomTree(size - 1).add(randomInt(0, 50));
+        }
+
+    }
+
     public static boolean checkIsEmpty(Tree t) throws Exception {
         // if instance of t is an EmptyBST then it should return true
         // otherwise it should return false
