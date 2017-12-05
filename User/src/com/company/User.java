@@ -8,9 +8,10 @@ public class User {
     int age;
     Set<Integer> orderIDs;
 
-    public User(String username, String password, int age) {
+    public User(String username, String password, int age, Set<Integer> orderIDs) {
         this.username = username;
         this.password = password;
         this.age = age;
+        this.orderIDs = orderIDs;
     }
 }
