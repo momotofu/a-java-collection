@@ -146,7 +146,7 @@ public class TicTacToe {
 
     public String gameOver() {
         if (isThereAWinner()) {
-            return "We have a winner! The winner is " + this.winner + "'s";
+            return "The winner is " + this.winner + "'s";
         } else if (isBoardFilled()) {
             return "It's a draw!";
         } else {
